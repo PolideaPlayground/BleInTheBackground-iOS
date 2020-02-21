@@ -78,7 +78,7 @@ export const scanDevice: (timeout: number) => Promise<Device> = (
     const clearSubscriptions = () => {
       manager.stopDeviceScan();
       if (subscriptions.timeout) {
-        Background.clearTimeout(timeout);
+        Background.clearTimeout(subscriptions.timeout);
         subscriptions.timeout = null;
       }
     };
